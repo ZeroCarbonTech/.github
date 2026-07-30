@@ -43,55 +43,6 @@ Engineered with complete alignment to GHG Protocol, SEBI BRSR Core, GRI, CSRD, a
 
 ---
 
-## 🚀 Quick Start & Deployment
-
-Launch the production stack via Docker Compose:
-
-```yaml
-version: '3.8'
-
-services:
-  zerocarbon-core:
-    image: zerocarbon/core:latest
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
-      - DATABASE_URL=postgresql://zerocarbon:secret@db:5432/zerocarbon_db
-      - REDIS_URL=redis://cache:6379
-    depends_on:
-      - db
-      - cache
-
-  zerocarbon-ai:
-    image: zerocarbon/ai-engine:latest
-    ports:
-      - "8000:8000"
-    environment:
-      - EMBEDDING_MODEL=text-embedding-3-small
-      - VECTOR_DB_HOST=qdrant
-
-  db:
-    image: postgres:16-alpine
-    environment:
-      POSTGRES_USER: zerocarbon
-      POSTGRES_PASSWORD: secret
-      POSTGRES_DB: zerocarbon_db
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
-  cache:
-    image: redis:7-alpine
-
-volumes:
-  pgdata:
-```
-
-```bash
-docker-compose up -d
-```
-
----
 
 ## 📈 Mission & Vision
 
@@ -242,7 +193,7 @@ We welcome contributions from software developers, climate tech researchers, and
 
 <div align="center">
 
-**[Website](https://zerocarbon.org.in)** · **[LinkedIn](https://linkedin.com)** · **[Email Us](mailto:hello@zerocarbon.org.in)**
+**[Website](https://zerocarbon.org.in)** · **[LinkedIn]([https://linkedin.com](https://www.linkedin.com/company/zerocarbon-tech))** · **[Email Us](mailto:support@zerocarbon.org.in)**
 
 <br />
 
