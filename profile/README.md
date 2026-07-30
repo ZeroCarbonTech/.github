@@ -26,11 +26,6 @@
 
   <br /><br />
 
-  ```bash
-  # Quick Launch ZeroCarbon Core via Docker
-  docker run -d -p 8080:8080 --name zerocarbon-core zerocarbon/engine:latest
-  ```
-
 </div>
 
 ---
@@ -67,7 +62,7 @@ Engineered with complete alignment to GHG Protocol, SEBI BRSR Core, GRI, CSRD, a
 
 <div align="center">
 
-| ⚡ 99.8%                          | 🍃 12M+ tCO₂e                     | 🏢 100+                           | 🔒 100%                           |
+| ⚡ 99.8%                          | 🍃 0M+ tCO₂e                     | 🏢 0+                           | 🔒 100%                           |
 |----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
 | Automated Factor Matching Accuracy | Enterprise Carbon Quantified    | Connected Supply Chains           | SOC2 & Audit Compliant            |
 
@@ -101,40 +96,37 @@ Engineered with complete alignment to GHG Protocol, SEBI BRSR Core, GRI, CSRD, a
 
 ```mermaid
 graph TD
-    classDef data fill:#1E293B,stroke:#475569,stroke-width:1px,color:#F8FAFC;
-    classDef core fill:#0F172A,stroke:#334155,stroke-width:1.5px,color:#F8FAFC;
-    classDef output fill:#047857,stroke:#10B981,stroke-width:1px,color:#FFFFFF;
 
-    subgraph Ingestion ["Data Integration Layer"]
-        A[ERP Systems: SAP / Oracle / NetSuite] ::: data
-        B[IoT Utility Meters & Gateways] ::: data
-        C[Vendor Invoices, Bills & Logistics PDFs] ::: data
-    end
+subgraph Ingestion["Data Integration Layer"]
+A["ERP Systems<br/>SAP /Oracle / NetSuite"]
+B["IoT Utility Meters & Gateways"]
+C["Vendor Invoices, Bills & Logistics PDFs"]
+end
 
-    subgraph CoreEngine ["ZeroCarbon Calculation Core"]
-        D[API Gateway & Auth Service] ::: core
-        E[Data Parser & Pipeline Manager] ::: core
-        F[AI Emission Factor Matcher] ::: core
-        G[Scope 1, 2, 3 Calculation Engine] ::: core
-        H[Auditable Ledger Database] ::: core
-    end
+subgraph Core["ZeroCarbon Calculation Core"]
+D["API Gateway"]
+E["Data Parser"]
+F["AI Emission Factor Matcher"]
+G["Carbon Calculation Engine"]
+H["Auditable Database"]
+end
 
-    subgraph Outputs ["Regulatory & Enterprise Outputs"]
-        I[SEBI BRSR Core PDF/XBRL Reports] ::: output
-        J[Executive Carbon Analytics Dashboard] ::: output
-        K[Third-Party Audit Export Logs] ::: output
-    end
+subgraph Outputs["Enterprise Outputs"]
+I["BRSR Reports"]
+J["Analytics Dashboard"]
+K["Audit Logs"]
+end
 
-    A --> D
-    B --> D
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> I
-    H --> J
-    H --> K
+A --> D
+B --> D
+C --> D
+D --> E
+E --> F
+F --> G
+G --> H
+H --> I
+H --> J
+H --> K
 ```
 
 ---
