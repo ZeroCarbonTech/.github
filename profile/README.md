@@ -185,7 +185,7 @@ We welcome contributions from software developers, climate tech researchers, and
 
 <div align="center">
 
-**[Website](https://zerocarbon.org.in)** · **[LinkedIn]([https://linkedin.com](https://www.linkedin.com/company/zerocarbon-tech))** · **[Email Us](mailto:support@zerocarbon.org.in)**
+**[Website](https://zerocarbon.org.in)** · **[LinkedIn](https://www.linkedin.com/company/zerocarbon-tech)** · **[Email Us](mailto:support@zerocarbon.org.in)**
 
 <br />
 
